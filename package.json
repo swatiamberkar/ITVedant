@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserslist": "^4.21.5",
     "caniuse-lite": "^1.0.30001457",
+    "chrome": "^0.1.0",
     "cypress": "^9.5.4",
     "cypress-xpath": "^2.0.1"
   }
