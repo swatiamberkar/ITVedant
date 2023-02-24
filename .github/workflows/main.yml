@@ -14,7 +14,23 @@ jobs:
           run: npm install
         - name: Cypress run
           uses: cypress-io/github-action@v4
+        - name: Chrome headed
+          uses: ./
           with:
-              browser: chrome
-              headed: true
-           
+            working-directory: examples/v9/chrome
+            browser: chrome
+            headed: true
+
+        - uses: actions/upload-artifact@v3
+          with:
+            name: screenshots-in-headed-chrome-v9
+            path: examples/v9/chrome/cypress/screenshots
+
+        - uses: actions/upload-artifact@v3
+          with:
+            name: video-in-headed-chrome-v9
+            path: examples/v9/chrome/cypress/videos
+
+        - run: npx image-size cypress/screenshots/**/*.png
+          working-directory: examples/v9/chrome
+
