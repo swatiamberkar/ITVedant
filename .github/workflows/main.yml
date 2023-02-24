@@ -17,16 +17,3 @@ jobs:
           with:
             browser: chrome
             headed: true
-      
-        - uses: actions/upload-artifact@v3
-          with:
-            name: screenshots-in-headed-chrome-v9
-            path: examples/v9/chrome/cypress/screenshots
-
-        - uses: actions/upload-artifact@v3
-          with:
-            name: video-in-headed-chrome-v9
-            path: examples/v9/chrome/cypress/videos
-
-  
-
