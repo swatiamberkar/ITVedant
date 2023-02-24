@@ -12,8 +12,6 @@ jobs:
             node-version: '16.x'
         - name: Install dependencies
           run: npm install
-        - name: Cypress run
-          uses: cypress-io/github-action@v4
         - name: Chrome headed
           uses: ./
           with:
