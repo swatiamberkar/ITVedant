@@ -17,4 +17,4 @@ jobs:
           with:
               browser: chrome
               headed: true
-              record: true
+           
