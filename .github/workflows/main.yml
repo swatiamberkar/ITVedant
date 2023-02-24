@@ -4,8 +4,6 @@ jobs:
   cypress-run:
     runs-on: windows-latest
     steps:
-    - name: Install dependencies
-      run: npm install
     - name: Cypress run
       uses: cypress-io/github-action@v4
       with:
