@@ -1,7 +1,8 @@
 name: Chrome headed
 on:
+ push:
  schedule:
-  - cron: "0 12 * * *"
+  - cron: "30 12 * * *"
 jobs:
   cypress-run:
     runs-on: windows-latest
