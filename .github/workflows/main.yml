@@ -6,10 +6,10 @@ jobs:
   cypress-run:
     runs-on: windows-latest
     steps:
-    - name: Setup Chrome
-    - uses: browser-actions/setup-chrome@v1.1.0
-    - uses: actions/checkout@v3
-    - uses: cypress-io/github-action@v5.0.9
-      with:
-        browser: chrome
-        headed: true
+      - uses: browser-actions/setup-chrome@v1
+      - run: chrome --version 
+      - uses: actions/checkout@v3
+      - uses: cypress-io/github-action@v5.0.9
+        with:
+          browser: chrome
+          headed: true
