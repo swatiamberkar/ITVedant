@@ -1,11 +1,18 @@
 name: Chrome headed
-on: [push]
+on: 
+  schedule:
+  - cron: "0 10 * * *"
 jobs:
   cypress-run:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: cypress-io/github-action@v5.0.9
-        with:
-          browser: chrome
-          headed: true
+    - name: Setup Browser
+
+    - uses: abhi1693/setup-browser@v0.3.5
+      with: 
+        browser: chrome
+    - uses: actions/checkout@v3
+    - uses: cypress-io/github-action@v5.0.9
+      with:
+        browser: chrome
+        headed: true
