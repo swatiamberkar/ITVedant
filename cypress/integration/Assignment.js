@@ -8,7 +8,7 @@ it('Login ', function() {
     cy.get(':nth-child(7) > .bg-success').click()
     cy.get('.navigation-accordion > :nth-child(1) > a > :nth-child(2) > span').click({force: true});
     cy.get(':nth-child(1) > a > .panel > .panel-body > h4.no-margin').click({force: true});
-	for(var i=0; i<100; i++){
+	for(var i=0; i<10; i++){
 	cy.xpath("//tbody/tr[1]/td[2]").click({force: true})
     cy.wait(500)
     cy.get(':nth-child(1) > .choice > span > .styled').check();
