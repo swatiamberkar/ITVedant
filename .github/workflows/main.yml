@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
        - name: Setp Chrome
-         uses: browser-actions/setup-chrome@v1
+         uses: browser-actions/setup-chrome@v2
        - run: chrome --version 
        - name: Checkout  
          uses: actions/checkout@v3
@@ -15,4 +15,10 @@ jobs:
          uses: cypress-io/github-action@v5.0.9
          with:
               browser: chrome
-              headed: true
+              headed: true  
+       - name: Upload screenshots
+         uses: actions/upload-artifact@latest
+         if: failure()
+         with:
+             name: cypress-snapshots
+             path: cypress/snapshots
